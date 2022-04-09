@@ -1,0 +1,305 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+    outline: none;
+}
+*::selection{
+    background-color: rgb(225, 17, 62);
+    color: #fff;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),
+    url(./images/background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    padding:1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    z-index: 1000;
+    position: fixed;
+    top:0; left:0; right:0;
+}
+nav .logo{
+    font-size: 3rem;
+    cursor: pointer;
+}
+nav .logo span{
+    color: #f44336;
+}
+nav .links{
+    padding-left: 0;
+}
+nav .links li{
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: 1.4rem;
+}
+nav .links li a{
+    color: #fff;
+    text-decoration: none;
+}
+.links .active{
+    color: rgb(228, 166, 179);
+}
+nav .links li a:hover{
+    color:  rgb(228, 166, 179);
+}
+nav .links li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+nav .links li:hover::after{
+    width: 100%;
+}
+header .content{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+header .content h1{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+.btn{
+    padding: 0.5rem 1.2rem;
+    background-color: transparent;
+    border: 0.3rem solid #f44336;
+    color:#f44336;
+    margin-top: 1.8rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+}
+.btn:hover{
+    background-color: rgb(235, 238, 46);
+    border: 0.0rem ;
+    color: #fff;
+}
+/* Start About */
+.about .row{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2% 6%;
+}
+.about .row .image{
+    flex: 1 1 32rem;
+    padding: 1.5rem;
+}
+.about .row .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about .row .content{
+    flex: 1 1 33rem;
+    padding: 2rem;
+    text-align: center;
+}
+.about .row .content .title{
+    font-size: 3rem;
+    margin-bottom: 3.5rem;
+}
+.about .row .content .title span{
+    color: rgb(225, 17, 62);
+}
+.about .row .content p{
+    line-height: 1.3;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+/* Start Services */
+.services{
+    background-image: url('./images/33.jpg') ;
+    min-height: 100vh;
+    text-align: center;
+    padding: 2% 6%;
+}
+.services .title{
+    font-size: 3.8rem;
+    padding: 0.5rem;
+    display: inline-block;
+    color: black;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.services .title span{
+   color:rgb(225, 17, 62);
+}
+.services .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.services .container .box{
+    width: 18rem;
+    height: 18rem;
+    margin: .5rem;
+    position: relative;
+    overflow: hidden;
+}
+.services .container .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.services .container .box .info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transform-origin: bottom;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.services .container .box:hover .info{
+    transform: translate(-50%, -50%) scale(1);
+}
+.services .container .box .info h3{
+    font-size: 1.2rem;
+    color: rgb(225, 17, 62);
+    margin-bottom: 0.8rem;
+}
+.services .container .box .info p{
+    line-height: 2;
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 0 1rem;
+    margin-bottom: 1.2rem;
+}
+/* Start Trainers */
+.our-trainers{
+    padding: 3rem 7%;
+    text-align: center;
+}
+.main-trainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:0;
+}
+.our-trainers .title{
+    font-size: 3.8rem;
+    padding: 0.5rem;
+    display: inline-block;
+    color: black;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-right: 5rem;
+}
+.our-trainers .title span{
+   color:rgb(225, 17, 62);
+}
+
+.inner-trainer{
+    flex:1 1 300px;
+  
+}
+.inner-trainer img{
+    width: 100%;
+    transform: scale(1);;
+    height: 100%;
+    object-fit: cover
+}
+.inner-trainer img:hover{
+    transform: translateY(-20px);
+}
+.trainer-content{
+    padding: 0 2rem;
+}
+.trainer-content h2{
+    color: var(--redclr);
+    font-size:1.8rem;
+    margin-bottom: 5px;
+}
+.trainer-content span{
+color: black;
+font-size: 1.5rem;
+padding: 15px 0;
+}
+.trainer-content hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.trainer-content p{
+    font-size: 1.1rem;
+}
+/* customer-review */
+.customer-review{
+    padding: 5rem 7%;
+    text-align: center
+}
+.customer-review .title{
+    font-size: 3.8rem;
+    padding: 0.5rem;
+    display: inline-block;
+    color: black;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.customer-review .title span{
+   color:rgb(225, 17, 62);
+}
+.main-customer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.inner-customer{
+    flex: 1 1 300px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 3rem 1rem;
+    position: relative;
+}
+.inner-customer:hover{
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.inner-customer img{
+position: absolute;
+top: -15%;
+width: 70px;
+}
+.review-icons{
+    padding: 1rem 0;
+    margin-top: 15px;
+}
+.review-icons i{
+    color: yellow;
+    font-size: 18px;
+}
+.inner-customer p{
+    font-size: 1.5rem;
+    padding: 1.5rem .5rem;
+}
