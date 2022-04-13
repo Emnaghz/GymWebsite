@@ -9,8 +9,82 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./styleLogin.css">
+    <style>
+        body {
+            background-image:url(./images/bg1.jpg);
+        }
+        nav{
+            padding:1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            z-index: 1000;
+            position: fixed;
+            top:0; left:0; right:0;
+        }
+
+        nav .logo{
+    font-size: 3rem;
+    cursor: pointer;
+}
+nav .logo span{
+    color: #f44336;
+}
+nav .links{
+    padding-left: 0;
+}
+nav .links li{
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: 1.4rem;
+}
+nav .links li a{
+    color: #fff;
+    text-decoration: none;
+}
+.links .active{
+    color: rgb(228, 166, 179);
+}
+nav .links li a:hover{
+    color:  rgb(228, 166, 179);
+}
+nav .links li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+nav .links li:hover::after{
+    width: 100%;
+}
+header .content{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+    </style>
 </head>
 <body>
+    <header>
+            <nav>
+                <div class="logo"><span>U</span>FIT</div>
+                <ul class="links">
+                    <li><a href="./home.php">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#trainers">Trainers</a></li>
+                    <li><a href="#">Plan</a></li>
+                    <li><a href="./login.php">Login</a></li>
+                </ul>
+            </nav>
+    </header>
+
     <div class="container">
         <form action="" class="login-email">
             <p class="login-text" style="fint-size:2rem; font-weight:800;">Login</p>

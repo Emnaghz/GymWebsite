@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* > * {
+    font-family: 'Poppins', sans-serif;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -79,6 +85,9 @@ header .content h1{
     text-transform: uppercase;
     color: #fff;
 }
+header .content .btn{
+    color: #f44336;;
+}
 .btn{
     padding: 0.5rem 1.2rem;
     background-color: transparent;
@@ -88,6 +97,9 @@ header .content h1{
     cursor: pointer;
     border-radius: 0.5rem;
     font-size: 1.5rem;
+}
+.content .btn {
+    color:#f44336;
 }
 .btn:hover{
     background-color: rgb(235, 238, 46);
@@ -255,7 +267,8 @@ padding: 15px 0;
 }
 /* customer-review */
 .customer-review{
-    padding: 5rem 7%;
+    background-image: url('./images/33.jpg') ;
+    padding: 3rem 7%;
     text-align: center
 }
 .customer-review .title{
@@ -263,43 +276,148 @@ padding: 15px 0;
     padding: 0.5rem;
     display: inline-block;
     color: black;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     margin-bottom: 1.5rem;
 }
 .customer-review .title span{
    color:rgb(225, 17, 62);
 }
-.main-customer{
+.customer-review  .title-review{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: rgb(50, 50, 50);
+    margin-bottom: .5rem;
+    margin-top: 1.5rem;
+}
+.customer-review  .note{
+    font-size: 1.1rem;
+    color: rgb(150, 150, 150);
+    font-style: italic;
+      color: red;
+}
+.customer-review  .reviews{
+    margin: 2rem auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 15px;
 }
-.inner-customer{
-    flex: 1 1 300px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    padding: 3rem 1rem;
-    position: relative;
+
+.customer-review  .review{
+margin: 0 1rem;
+min-width: 250px;
+flex: 1;
 }
-.inner-customer:hover{
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+.customer-review  .head-review{
+margin: 1.75rem auto;
+width: 150px;
+height: 150px;
 }
-.inner-customer img{
-position: absolute;
-top: -15%;
-width: 70px;
+.customer-review .head-review .ronde{
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 50%;
+box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
 }
-.review-icons{
-    padding: 1rem 0;
-    margin-top: 15px;
+.customer-review .head-review .ronde:hover
+{
+    transform:  scaleX(-1);
 }
-.review-icons i{
-    color: yellow;
-    font-size: 18px;
+.customer-review .body-review{
+background-color: rgb(238, 238, 238);
+padding: 2rem;
+box-shadow: 2px 2px 10px 3px rgb(225, 225, 225);
 }
-.inner-customer p{
-    font-size: 1.5rem;
-    padding: 1.5rem .5rem;
+.customer-review .body-review:hover{
+    transform: translateY(10px);
+   
 }
+.customer-review .name-review{
+font-size: 1.2rem;
+color: rgb(50, 50, 50);
+margin-bottom: .15rem;
+}
+.customer-review .rating{
+color: rgb(253, 180, 42);
+margin: 1rem 0;
+}
+.customer-review .desc-review{
+line-height: 1rem;
+letter-spacing: 0.7px;
+color: rgb(150, 150, 150);
+}
+
+@media (max-width: 678px){
+.review{
+    margin-top: 1.5rem;
+}
+}
+/* customer-review */
+
+.contact .title{
+    font-size: 3.8rem;
+    padding: 0.5rem;
+    display: inline-block;
+    color: black;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.contact .title span{
+   color:rgb(225, 17, 62);
+}
+.contact{
+padding: 30px 0px;
+}
+
+.contact-row{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.contact-left-col{
+flex-basis: 50%;
+padding-top: 50px;
+}
+.contact-right-col{
+flex-basis: 50%;
+max-width: 500px;
+margin: auto;
+}
+.contact-right-col i{
+font-size: 20px;
+padding: 10px;
+background:#74b9ff;
+color: white; 
+}
+.contact-right-col p{
+margin-top: 10px;
+margin-bottom: 20px;
+width: 50%;
+}
+.form{
+width: 70%;
+margin:auto;
+text-align: center;
+}
+.form input[type="text"]{
+width: 70%;
+padding: 10px;
+margin-bottom: 10px;
+}
+textarea{
+width: 70%;
+padding: 10px;
+margin-bottom: 10px;
+}
+
+
+
+.c_btn{
+background: black;
+color: white;
+padding: 10px;
+width: 50%;
+border:none;
+}
+

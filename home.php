@@ -10,23 +10,26 @@
     <title>UFIT Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/44f557ccce.js"></script>
+
 </head>
 <body>
     <header>
         <nav>
             <div class="logo"><span>U</span>FIT</div>
             <ul class="links">
-                <li><a href="#">Home</a></li>
+                <li><a href="e.php/homr">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#trainers">Trainers</a></li>
                 <li><a href="#">Plan</a></li>
-                <li><a href="#">Register</a></li>
+                <li><a href="./login.php">Login</a></li>
             </ul>
         </nav>
         <div class="content">
             <h1>Time To Start Your Journey</h1>
-            <button class="btn">Get started</button>
+            <button class="btn"><a href="./login.php" style="color: #f44336">Get started</a></button>
         </div>
     </header>
 
@@ -93,7 +96,7 @@
 
     <!-- Start Trainers -->
     <section class="our-trainers">
-        <div class="title">Our <span>Trainers</span></div>
+        <div class="title">Meet Our <span>Trainers</span></div>
     
         <div class="main-trainer">
             <div class="inner-trainer">
@@ -136,26 +139,108 @@
     </section>
 
     <!-- reviews -->
-<div class="customer-review">
-    <div class="title">customer <span>review</span></div>
- <div class="main-customer">
-    <div class="inner-customer">
-        <img src="images/cardio.jpg" alt="">
-        <p>AMAZING GYM, AMAZING WORKOUTS! The staff here is incredibly friendly and extremely qualified! They know how to push you to the limit in the best way possible with your workouts. You will not leave disappointed!</p>
-    </div>
+    <section class="customer-review">
+        <div class="title">Our <span>Reviews</span></div>
 
-    <div class="inner-customer">
-        <img src="images/coach1.jpg" alt="">
-        <p> Excellent personal training. Trainers who really care and go above and beyond to help you achieve your goals. Small and private gym that feels more personal. Highly recommended!</p>
-    </div>
+        <h2 class="title-review">Our Clients Love Us</h2>
+        <p class="note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil laboriosam possimus perferendis non error neque.</p>
 
-    <div class="inner-customer">
-        <img src="images/box.jpg" alt="">
-        <p>This is a fantastic gym!! All the trainers are super nice and take an interest in you no matter what fitness level you're at. I really like how they give me tips and tricks to get the most out of every workout.</p>
-    </div>
- </div>
-</div>
+        <div class="reviews">
+        <div class="review">
+                <div class="head-review">
+                    <img class="ronde" src="images/c1.jpg" width="250px">
+                </div>
+                <div class="body-review">
+                    <div class="name-review">Nathan D.</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half"></i>
+                    </div>
+                    <div class="desc-review">AMAZING GYM, AMAZING WORKOUTS! The staff here is incredibly friendly and extremely qualified! They know how to push you to the limit in the best way possible with your workouts.</div>
+                </div>
+            </div>
+            <div class="review">
+                <div class="head-review">
+                    <img class="ronde" src="images/c2.jpg" width="250px">
+                </div>
+                <div class="body-review">
+                    <div class="name-review">Nathan D.</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="desc-review">Excellent personal training. Trainers who really care and go above and beyond to help you achieve your goals. Small and private gym that feels more personal. Highly recommended!</div>
+                </div>
+            </div>
+            <div class="review">
+                <div class="head-review">
+                    <img class="ronde" src="images/c3.jpg" width="250px">
+                </div>
+                <div class="body-review">
+                    <div class="name-review">Nathan D.</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half"></i>
+                    </div>
+                    <div class="desc-review">This is a fantastic gym!! All the trainers are super nice and take an interest in you no matter what fitness level you're at. I really like how they give me tips and tricks to get the most out of every workout.</div>
+                </div>
+            </div>
+            <div class="review">
+                <div class="head-review">
+                    <img class="ronde" src="images/c4.jpg" width="250px">
+                </div>
+                <div class="body-review">
+                    <div class="name-review">Nathan D.</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half"></i>
+                    </div>
+                    <div class="desc-review">This is a fantastic gym!! All the trainers are super nice and take an interest in you no matter what fitness level you're at. I really like how they give me tips and tricks to get the most out of every workout.</div>
+                </div>
+            </div>
 
+        </div>
+
+    </section>
+
+    <!-- contact -->
+
+    <section class="contact">
+        <div class="title">Get in <span>Touch</span></div>
+	    <p> We are Available</p>
+        
+        <div class="contact-row">
+            <div class="contact-left-col">
+                <div class="form">
+                    <input type="text" name="" placeholder="E-mail">
+                    <input type="text" name="" placeholder="Subject"><br>
+                    <textarea rows="10" cols="40" placeholder="Message"></textarea>
+                    <br> <button class="c_btn">Send</button>
+                </div>
+            </div>
+            <div class="contact-right-col">
+                <h1><i class="fa fa-envelope-o" aria-hidden="true"></i> E-mail</h1> <p>nd03081998@gmail.com</p><br>
+                <h1><i class="fa fa-phone" aria-hidden="true"></i> Mobile</h1><p>823944147, 823944140</p>
+                <br>
+                <h1><i class="fa fa-location-arrow" aria-hidden="true"></i> Address</h1>
+                <p> Near Shyam Mandir<br>
+                    Ward no.5, Laxmangarh (Sikar), Rajasthan
+                </p>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
