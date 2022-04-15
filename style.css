@@ -27,6 +27,7 @@ header{
     background-size: cover;
 }
 nav{
+    background-color: black;
     padding:1.5rem 5%;
     display: flex;
     justify-content: space-between;
@@ -35,6 +36,7 @@ nav{
     z-index: 1000;
     position: fixed;
     top:0; left:0; right:0;
+    
 }
 nav .logo{
     font-size: 3rem;
@@ -352,9 +354,12 @@ color: rgb(150, 150, 150);
     margin-top: 1.5rem;
 }
 }
-/* customer-review */
+/* contact */
+.touch{
+    text-align: center;
+}
 
-.contact .title{
+/*.contacttitle .title{
     font-size: 3.8rem;
     padding: 0.5rem;
     display: inline-block;
@@ -363,8 +368,18 @@ color: rgb(150, 150, 150);
     margin-bottom: 1.5rem;
     text-align: center;
 }
-.contact .title span{
+.contacttitle .title span{
    color:rgb(225, 17, 62);
+}*/
+/*
+.contact{
+    font-size: 3.8rem;
+    padding: 0.5rem;
+    display: inline-block;
+    color: black;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 .contact{
 padding: 30px 0px;
@@ -411,13 +426,11 @@ padding: 10px;
 margin-bottom: 10px;
 }
 
-
-
 .c_btn{
 background: black;
 color: white;
 padding: 10px;
 width: 50%;
 border:none;
-}
+}*/
 

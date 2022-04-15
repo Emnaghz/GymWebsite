@@ -1,3 +1,38 @@
+<?php
+session_start();
+require 'config.php';
+if(isset($_POST["submiti"])){
+    $usernameEmail = $_POST["usernameEmail"];
+    $password = $_POST["password"];
+    if(!empty($usernameEmail) AND !empty($password)){
+        $result = mysqli_query($conn,"SELECT * FROM register WHERE username = '$usernameEmail' OR email = '$usernameEmail' ");
+        $row = mysqli_fetch_assoc($result);
+        if(mysqli_num_rows($result) > 0){
+            if($password == $row["password"]){
+                if($row["is_admin"] == 1)
+                {
+                    $_SESSION['id'] = $row['id'];
+                    header('Location: ./espaceAdmin/adminInterface.php');
+                }else{
+                    $_SESSION['id'] = $row['id'];
+                    header('Location: ./userInterface.php');
+                }
+            }else{
+                echo"<script> alert('Wrong Password'); </script>";
+            }
+    
+        }else{
+            echo"<script> alert('User not registered'); </script>";
+        }
+
+    }else{
+        echo"<script> alert('fill all fields!'); </script>";
+    }
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,66 +44,6 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./styleLogin.css">
-    <style>
-        body {
-            background-image:url(./images/bg1.jpg);
-        }
-        nav{
-            padding:1.5rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #fff;
-            z-index: 1000;
-            position: fixed;
-            top:0; left:0; right:0;
-        }
-
-        nav .logo{
-    font-size: 3rem;
-    cursor: pointer;
-}
-nav .logo span{
-    color: #f44336;
-}
-nav .links{
-    padding-left: 0;
-}
-nav .links li{
-    display: inline-block;
-    margin-left: 1rem;
-    font-size: 1.4rem;
-}
-nav .links li a{
-    color: #fff;
-    text-decoration: none;
-}
-.links .active{
-    color: rgb(228, 166, 179);
-}
-nav .links li a:hover{
-    color:  rgb(228, 166, 179);
-}
-nav .links li::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #f44336;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-nav .links li:hover::after{
-    width: 100%;
-}
-header .content{
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-    </style>
 </head>
 <body>
     <header>
@@ -86,16 +61,16 @@ header .content{
     </header>
 
     <div class="container">
-        <form action="" class="login-email">
+        <form action="#" class="login-email" method="POST">
             <p class="login-text" style="fint-size:2rem; font-weight:800;">Login</p>
             <div class="input-group">
-                <input type="email" name="" id="" placeholder="Email"required>
+                <input type="text" name="usernameEmail" id="" placeholder="Username or Email" required>
             </div>
             <div class="input-group">
-                <input type="password" name="" id="" placeholder="Password"required>
+                <input type="password" name="password" id="" placeholder="Password" required>
             </div>
             <div class="input-group">
-                <button class="btn">Login</button>
+                <button class="btn" type="submit" name="submiti">Login</button>
             </div>
             <p class="login-register-text">Don't have an account?<a href="register.php"> Register Here</a></p>
         </form>

@@ -1,25 +1,29 @@
 <?php
+echo"<script src='./js/sweetalert2@11.js'></script>";
 
-include 'config.php'; 
-if(isset($_POST['submit'])){
+require 'config.php';
+
+if(isset($_POST["submit"])){
     $username = $_POST['username'];
     $email = $_POST['email'];
+    $phone = $_POST['phone'];
     $cin = $_POST['cin'];
     $password = md5($_POST['password']);
     $cpassword = md5($_POST['cpassword']);
-
-
-    if($password == $cpassword){
-        $sql = "INSERT INTO register(username, email, cin, password) VALUES ($username, $email, $cin, $password)";
-        $result = mysqli_query($conn, $sql);
-        if(!$result){
-            echo"<script>alert('Woops! Something wrong went ')</script>";
-        }
+    $duplicate = mysqli_query($conn, "SELECT * FROM register WHERE username ='$username'  OR email = '$email'");
+    if(mysqli_num_rows($duplicate) > 0){
+        echo"<script> alert('Username or Email Already Exist'); </script>";
     }else{
-        echo"<script>alert('password Not Matched.')</script>";
+        if($password === $cpassword){
+            $query = "INSERT INTO register(username,email,phone,cin,password) VALUES ('$username','$email','$phone','$cin','$password')";
+        mysqli_query($conn,$query);
+        /*echo"<script> Swal.fire ('Correct!', 'You got the answer right!', 'success');</script>";*/
+        echo"<script> alert('registered successfully!');</script>";
+        }else{
+        echo"<script> alert('Password does not match');</script>";
+        }
     }
 }
-
 
 ?>
 
@@ -34,68 +38,9 @@ if(isset($_POST['submit'])){
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./styleLogin.css">
+    <script src="./js/sweetalert2@11.js"></script>
     <style>
-        body {
-            background-image:url(./images/bg1.jpg);
-        }
-        nav{
-            padding:1.5rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #fff;
-            z-index: 1000;
-            position: fixed;
-            top:0; left:0; right:0;
-        }
-
-        nav .logo{
-    font-size: 3rem;
-    cursor: pointer;
-}
-nav .logo span{
-    color: #f44336;
-}
-nav .links{
-    padding-left: 0;
-}
-nav .links li{
-    display: inline-block;
-    margin-left: 1rem;
-    font-size: 1.4rem;
-}
-nav .links li a{
-    color: #fff;
-    text-decoration: none;
-}
-.links .active{
-    color: rgb(228, 166, 179);
-}
-nav .links li a:hover{
-    color:  rgb(228, 166, 179);
-}
-nav .links li::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #f44336;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-nav .links li:hover::after{
-    width: 100%;
-}
-header .content{
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-.container {
-    margin-top:10%;
-}
+        
     </style>
 </head>
 <body>
@@ -116,22 +61,25 @@ header .content{
         <form action="" method="POST" class="login-email">
             <p class="login-text" style="fint-size:2rem; font-weight:800;">Register</p>
             <div class="input-group">
-                <input type="text" name="username" id="" placeholder="Username" value="<?php echo $username; ?>" required>
+                <input type="text" name="username" id="" placeholder="Username" value="" required>
             </div>
             <div class="input-group">
-                <input type="email" name="email" id="" placeholder="Email" value="<?php echo $email; ?>" required>
+                <input type="email" name="email" id="" placeholder="Email" value="" required>
             </div>
             <div class="input-group">
-                <input type="password" name="cin" id="" placeholder="CIN" vvalue="<?php echo $_POST['cin']; ?>" required>
+                <input type="text" name="phone" id="" placeholder="Phone Number" value="" required>
             </div>
             <div class="input-group">
-                <input type="password" name="password" id="" placeholder="Password" value="<?php echo $_POST['password']; ?>" required>
+                <input type="text" name="cin" id="" placeholder="CIN" vvalue="" required>
             </div>
             <div class="input-group">
-                <input type="password" name="cpassword" id="" placeholder="Confirm Password" value="<?php echo $_POST['cpassword']; ?>" required>
+                <input type="password" name="password" id="" placeholder="Password" value="" required>
             </div>
             <div class="input-group">
-                <button name='submit' class="btn">Enter</button>
+                <input type="password" name="cpassword" id="" placeholder="Confirm Password" value="" required>
+            </div>
+            <div class="input-group">
+                <button name='submit' class="btn">Register</button>
             </div>
             <p class="login-register-text">Have an account?<a href="login.php"> Login Here</a></p>
         </form>

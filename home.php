@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/44f557ccce.js"></script>
+    <style>
+        nav{
+            background-color: black;
+        }
+    </style>
 
 </head>
 <body>
@@ -19,7 +24,7 @@
         <nav>
             <div class="logo"><span>U</span>FIT</div>
             <ul class="links">
-                <li><a href="e.php/homr">Home</a></li>
+                <li><a href="./home.php">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#trainers">Trainers</a></li>
@@ -95,7 +100,7 @@
     </section>
 
     <!-- Start Trainers -->
-    <section class="our-trainers">
+    <section class="our-trainers" id="trainers">
         <div class="title">Meet Our <span>Trainers</span></div>
     
         <div class="main-trainer">
@@ -215,12 +220,10 @@
 
     </section>
 
+
     <!-- contact -->
 
     <section class="contact">
-        <div class="title">Get in <span>Touch</span></div>
-	    <p> We are Available</p>
-        
         <div class="contact-row">
             <div class="contact-left-col">
                 <div class="form">
@@ -231,12 +234,12 @@
                 </div>
             </div>
             <div class="contact-right-col">
-                <h1><i class="fa fa-envelope-o" aria-hidden="true"></i> E-mail</h1> <p>nd03081998@gmail.com</p><br>
+                <h1><i class="fa fa-envelope-o" aria-hidden="true"></i> E-mail</h1> <p>UFITgym.Contact@gmail.com</p><br>
                 <h1><i class="fa fa-phone" aria-hidden="true"></i> Mobile</h1><p>823944147, 823944140</p>
                 <br>
                 <h1><i class="fa fa-location-arrow" aria-hidden="true"></i> Address</h1>
-                <p> Near Shyam Mandir<br>
-                    Ward no.5, Laxmangarh (Sikar), Rajasthan
+                <p> Near Manar City<br>
+                    Rue Habib Thamer no.5, Laxmangarh (Sikar), Rajasthan
                 </p>
             </div>
         </div>
