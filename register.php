@@ -49,16 +49,16 @@ if(isset($_POST["submit"])){
                 <div class="logo"><span>U</span>FIT</div>
                 <ul class="links">
                     <li><a href="./home.php">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#trainers">Trainers</a></li>
+                    <li><a href="./home.php#about">About</a></li>
+                    <li><a href="./home.php#services">Services</a></li>
+                    <li><a href="./home.php#trainers">Trainers</a></li>
                     <li><a href="#">Plan</a></li>
                     <li><a href="./login.php">Login</a></li>
                 </ul>
             </nav>
     </header>
     <div class="container">
-        <form action="" method="POST" class="login-email">
+        <form action="" method="POST" class="login-email" onsubmit="return confirm()">
             <p class="login-text" style="fint-size:2rem; font-weight:800;">Register</p>
             <div class="input-group">
                 <input type="text" name="username" id="" placeholder="Username" value="" required>

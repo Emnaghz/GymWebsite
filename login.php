@@ -51,9 +51,9 @@ if(isset($_POST["submiti"])){
                 <div class="logo"><span>U</span>FIT</div>
                 <ul class="links">
                     <li><a href="./home.php">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#trainers">Trainers</a></li>
+                    <li><a href="./home.php#about">About</a></li>
+                    <li><a href="./home.php#services">Services</a></li>
+                    <li><a href="./home.php#trainers">Trainers</a></li>
                     <li><a href="#">Plan</a></li>
                     <li><a href="./login.php">Login</a></li>
                 </ul>
