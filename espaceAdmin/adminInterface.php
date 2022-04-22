@@ -1,15 +1,11 @@
 <?php
-    $server = "localhost";
+    $servername = "localhost";
     $username = "root";
     $password = "";
     $database = "login";
     
-    $conn = mysqli_connect($server, $username, $password, $database); 
+    $conn = mysqli_connect($server, $username, $password,$database); 
     
-    // Check connection
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
     //echo "Connected successfully";
     mysqli_select_db($conn,'register');
 
@@ -52,6 +48,7 @@
 
                     <thead>
                         <tr>
+                            <th>#</th>
                             <th>UserName</th>
                             <th>Phone</th>
                             <th>Email</th>
@@ -60,30 +57,28 @@
                             <th>Delete</th>
                         </tr>
                     </thead>
+
                     <?php
-                        include 'conn.php';
                         $q= "select * from register ";
-
-
                         $query = mysqli_query($conn,$q);
-                        while($res = mysqli_fetch_array($query)){
-
+                        while($row = mysqli_fetch_array($query)){
                         ?>
                     <tbody>
                         <tr>
-                            <td><?php echo $res['username'];  ?> </td>
-                            <td><?php echo $res['phone'];  ?> </td>
-                            <td><?php echo $res['email'];  ?> </td>
-                            <td><?php echo $res['cin'];  ?> </td>
+                            <td><?php echo $row['id'];  ?> </td>
+                            <td><?php echo $row['username'];  ?> </td>
+                            <td><?php echo $row['phone'];  ?> </td>
+                            <td><?php echo $row['email'];  ?> </td>
+                            <td><?php echo $row['cin'];  ?> </td>
                             <td>
                                 <button type="submit" class="btn btn-info">
-                                    <a href="update.php?ucin=<?php echo $res['in']; ?>" class="text-white"> Update
+                                    <a href="update.php?ucin=<?php echo $row['id']; ?>" class="text-white"> Update
                                     </a>
                                 </button> 
                             </td>
                             <td>
                                 <button type="submit" class="btn btn-danger">
-                                    <a href="delete.php?did=<?php echo $res['id']; ?>" class="text-white">Delete
+                                    <a href="delete.php?idp=<?php echo $row['id']; ?>" class="text-white">Delete
                                     </a>
                                 </button> 
                             </td>
@@ -94,73 +89,6 @@
                     ?>
                 </table>
                 <!--END Table-->   
-                
-                
-                <!-- Button to Open the Modal -->
-                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
-                    Add Trainer
-                </button>
-
-                <!-- The Modal -->
-                <div class="modal fade" id="myModal">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                    
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                                <h4 class="modal-title">New Trainer </h4>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <form action="insert.php" method="post" accept-charset="utf-8">
-                                    <div class="form-group">
-                                            <label>Trainer_id</label>
-                                            <input type="text" name="trnr_id" value="" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                            <label>Username</label>
-                                            <input type="text" name="trnr_name" value="" class="form-control">
-                                    </div>
-
-                                    <div class="form-group">
-                                            <label>Phone</label>
-                                            <input type="text" name="phone" value="" pattern="[0-9]{10}" class="form-control">
-                                    </div>
-                                        <div class="form-group">
-                                            <label>Pkg_id</label>
-                                            <select class="form-control" name="pkg_id" >
-                                                    <?php
-                                                        $qp="select * from package ";
-                                                    $queryp = mysqli_query($conn,$qp);
-                                                while($res2 = mysqli_fetch_array($queryp)) { ?>
-
-                                            <option value="<?php echo $res2[0];?>"><?php echo $res2[1];?></option>
-
-                                            <?php 
-                                            }
-                                            ?>
-
-                                                
-                                            </select> 
-                                    </div>
-
-                                    <button type="submit" class="btn btn-info" name="add_trainer">Register</button>
-                                
-                                </form>  
-                            </div>
-
-
-                            <!-- Modal footer -->
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                                </div>
-                                
-                        </div>
-                    </div>
-                </div>
-            </div>//trainer details
         </div>
     
 
