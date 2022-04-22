@@ -35,7 +35,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="list-group">
-                            <a href="Trainer.php" class="list-group-item list-group-item-action active">Trainers</a>
+                            <a href="#" class="list-group-item list-group-item-action active">Trainers</a>
                             <br>
                     </div>
                     <a class="btn btn-outline-primary" href="../logout.php">Logout</a>
