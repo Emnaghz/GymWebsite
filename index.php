@@ -24,7 +24,7 @@
         <nav>
             <div class="logo"><span>U</span>FIT</div>
             <ul class="links">
-                <li><a href="./home.php">Home</a></li>
+                <li><a href="./index.php">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#trainers">Trainers</a></li>
