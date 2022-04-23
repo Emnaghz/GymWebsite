@@ -17,6 +17,7 @@
 *::selection{
     background-color: rgb(225, 17, 62);
     color: #fff;
+    
 }
 header{
     width: 100%;
@@ -46,10 +47,11 @@ nav .logo span{
 }
 nav .links{
     padding-left: 0;
+    
 }
 nav .links li{
     display: inline-block;
-    margin-left: 1rem;
+    margin-left: 2rem;
     font-size: 1.4rem;
 }
 nav .links li a{
@@ -351,85 +353,7 @@ color: rgb(150, 150, 150);
 @media (max-width: 678px){
 .review{
     margin-top: 1.5rem;
+   
 }
 }
-/* contact */
-.touch{
-    text-align: center;
-}
-
-/*.contacttitle .title{
-    font-size: 3.8rem;
-    padding: 0.5rem;
-    display: inline-block;
-    color: black;
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-.contacttitle .title span{
-   color:rgb(225, 17, 62);
-}*/
-/*
-.contact{
-    font-size: 3.8rem;
-    padding: 0.5rem;
-    display: inline-block;
-    color: black;
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-.contact{
-padding: 30px 0px;
-}
-
-.contact-row{
-display: flex;
-justify-content: center;
-align-items: center;
-}
-.contact-left-col{
-flex-basis: 50%;
-padding-top: 50px;
-}
-.contact-right-col{
-flex-basis: 50%;
-max-width: 500px;
-margin: auto;
-}
-.contact-right-col i{
-font-size: 20px;
-padding: 10px;
-background:#74b9ff;
-color: white; 
-}
-.contact-right-col p{
-margin-top: 10px;
-margin-bottom: 20px;
-width: 50%;
-}
-.form{
-width: 70%;
-margin:auto;
-text-align: center;
-}
-.form input[type="text"]{
-width: 70%;
-padding: 10px;
-margin-bottom: 10px;
-}
-textarea{
-width: 70%;
-padding: 10px;
-margin-bottom: 10px;
-}
-
-.c_btn{
-background: black;
-color: white;
-padding: 10px;
-width: 50%;
-border:none;
-}*/
 

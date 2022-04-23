@@ -52,7 +52,7 @@
                             <th>UserName</th>
                             <th>Phone</th>
                             <th>Email</th>
-                            <th>CIN</th>
+                            <th>Date Of Birth</th>
                             <th>Update</th>
                             <th>Delete</th>
                         </tr>
@@ -69,16 +69,16 @@
                             <td><?php echo $row['username'];  ?> </td>
                             <td><?php echo $row['phone'];  ?> </td>
                             <td><?php echo $row['email'];  ?> </td>
-                            <td><?php echo $row['cin'];  ?> </td>
+                            <td><?php echo $row['dob'];  ?> </td>
                             <td>
                                 <button type="submit" class="btn btn-info">
-                                    <a href="update.php?ucin=<?php echo $row['id']; ?>" class="text-white"> Update
+                                    <a href="../update.php?id=<?php echo $row['id']; ?>" class="text-white"> Update
                                     </a>
                                 </button> 
                             </td>
                             <td>
                                 <button type="submit" class="btn btn-danger">
-                                    <a href="delete.php?idp=<?php echo $row['id']; ?>" class="text-white">Delete
+                                    <a href="../delete.php?id=<?php echo $row['id']; ?>" class="text-white">Delete
                                     </a>
                                 </button> 
                             </td>

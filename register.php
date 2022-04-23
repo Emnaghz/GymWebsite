@@ -6,8 +6,8 @@ require 'config.php';
 if(isset($_POST["submit"])){
     $username = $_POST['username'];
     $email = $_POST['email'];
+    $dob = $_POST['dob'];
     $phone = $_POST['phone'];
-    $cin = $_POST['cin'];
     $password = md5($_POST['password']);
     $cpassword = md5($_POST['cpassword']);
     $duplicate = mysqli_query($conn, "SELECT * FROM register WHERE username ='$username'  OR email = '$email'");
@@ -15,7 +15,7 @@ if(isset($_POST["submit"])){
         echo"<script> alert('Username or Email Already Exist'); </script>";
     }else{
         if($password === $cpassword){
-            $query = "INSERT INTO register(username,email,phone,cin,password) VALUES ('$username','$email','$phone','$cin','$password')";
+            $query = "INSERT INTO register(username,email,dob,phone,password) VALUES ('$username','$email','$dob,'$phone','$password')";
         mysqli_query($conn,$query);
         /*echo"<script> Swal.fire ('Correct!', 'You got the answer right!', 'success');</script>";*/
         echo"<script> alert('registered successfully!');</script>";
@@ -24,7 +24,6 @@ if(isset($_POST["submit"])){
         }
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +36,7 @@ if(isset($_POST["submit"])){
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styleLogin.css">
+    <link rel="stylesheet" href="./styleRegister.css">
     <script src="./js/sweetalert2@11.js"></script>
     <style>
         
@@ -48,41 +47,52 @@ if(isset($_POST["submit"])){
             <nav>
                 <div class="logo"><span>U</span>FIT</div>
                 <ul class="links">
-                    <li><a href="./home.php">Home</a></li>
-                    <li><a href="./home.php#about">About</a></li>
-                    <li><a href="./home.php#services">Services</a></li>
-                    <li><a href="./home.php#trainers">Trainers</a></li>
+                    <li><a href="./index.php">Home</a></li>
+                    <li><a href="./index.php#about">About</a></li>
+                    <li><a href="./index.php#services">Services</a></li>
+                    <li><a href="./index.php#trainers">Trainers</a></li>
                     <li><a href="#">Plan</a></li>
                     <li><a href="./login.php">Login</a></li>
                 </ul>
             </nav>
     </header>
     <div class="container">
-        <form action="" method="POST" class="login-email" onsubmit="return confirm()">
-            <p class="login-text" style="fint-size:2rem; font-weight:800;">Register</p>
-            <div class="input-group">
-                <input type="text" name="username" id="" placeholder="Username" value="" required>
-            </div>
-            <div class="input-group">
-                <input type="email" name="email" id="" placeholder="Email" value="" required>
-            </div>
-            <div class="input-group">
-                <input type="text" name="phone" id="" placeholder="Phone Number" value="" required>
-            </div>
-            <div class="input-group">
-                <input type="text" name="cin" id="" placeholder="CIN" vvalue="" required>
-            </div>
-            <div class="input-group">
-                <input type="password" name="password" id="" placeholder="Password" value="" required>
-            </div>
-            <div class="input-group">
-                <input type="password" name="cpassword" id="" placeholder="Confirm Password" value="" required>
-            </div>
-            <div class="input-group">
-                <button name='submit' class="btn">Register</button>
-            </div>
-            <p class="login-register-text">Have an account?<a href="login.php"> Login Here</a></p>
-        </form>
+    <div class="title">Registration</div>
+    <div class="content" >
+      <form action="#" method="POST" onsubmit="return confirm()">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" name="username" placeholder="Name and familyname" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" placeholder="Enter your email" name="email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Date Of Birth</span>
+            <input type="date" name="dob" placeholder="Enter your birthday" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" name="phone" placeholder="Enter your number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" name="password"  placeholder="Enter your password" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" name="cpassword" placeholder="Confirm your password" required>
+          </div>
+        </div>
+        <div class="input-group">
+            <button class="btn" type="submit" name="submit">Register</button>
+        </div>
+        <br>
+        <p  class="login-register-text">Have an account? <a href="login.php">Login Here</a></p>
+      </form>
     </div>
+  </div>
 </body>
 </html>

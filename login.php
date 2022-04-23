@@ -44,16 +44,49 @@ if(isset($_POST["submiti"])){
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./styleLogin.css">
+    <style>
+        .container .login-text{
+            font-size: 25px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .container .login-text::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 30px;
+            border-radius: 5px;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+        }
+        .container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+  }
+  .container .title::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  }
+    </style>
 </head>
 <body>
     <header>
             <nav>
                 <div class="logo"><span>U</span>FIT</div>
                 <ul class="links">
-                    <li><a href="./home.php">Home</a></li>
-                    <li><a href="./home.php#about">About</a></li>
-                    <li><a href="./home.php#services">Services</a></li>
-                    <li><a href="./home.php#trainers">Trainers</a></li>
+                    <li><a href="./index.php">Home</a></li>
+                    <li><a href="./index.php#about">About</a></li>
+                    <li><a href="./index.php#services">Services</a></li>
+                    <li><a href="./index.php#trainers">Trainers</a></li>
                     <li><a href="#">Plan</a></li>
                     <li><a href="./login.php">Login</a></li>
                 </ul>
@@ -61,8 +94,9 @@ if(isset($_POST["submiti"])){
     </header>
 
     <div class="container">
+    <div class="title">Login</div>
+    <br>
         <form action="#" class="login-email" method="POST">
-            <p class="login-text" style="fint-size:2rem; font-weight:800;">Login</p>
             <div class="input-group">
                 <input type="text" name="usernameEmail" id="" placeholder="Username or Email" required>
             </div>

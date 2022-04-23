@@ -16,6 +16,110 @@
         nav{
             background-color: black;
         }
+
+        /* contact */
+        #contact{
+            padding: 30px 0px;
+        }
+
+        .contact-row{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact-left-col{
+            flex-basis: 50%;
+            padding-top: 50px;
+        }
+        .contact-right-col{
+            flex-basis: 50%;
+            max-width: 450px;
+            margin: auto;
+        }
+        .contact-right-col i{
+            font-size: 20px;
+            padding: 10px;
+            background:#74b9ff;
+            color: white; 
+        }
+        .contact-right-col p{
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+
+        #footer{
+            background: black;
+            color:white;
+            padding: 10px;
+            display: flex;
+
+            justify-content: space-around;
+            align-items: center;
+        }
+
+
+        #footer h1{
+            font-size: 50px;
+        }
+        #footer p{
+            font-size: 25px;
+        }
+
+
+
+        .form{
+            margin-bottom: 0;
+            width: 70%;
+            margin:auto;
+            text-align: center;
+        }
+        .form input[type="text"]{
+            width: 70%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        textarea{
+            width: 70%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+
+
+        .c_btn{
+            background: black;
+            color: white;
+            padding: 10px;
+            width: 50%;
+            border:none;
+        }
+
+        nav{
+    padding:1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    z-index: 1000;
+    position: fixed;
+    top:0; left:0; right:0;
+    background-color: rgb(92, 0, 49);
+    margin:0cm;
+    padding: 0.01mm;
+    }
+    nav .links li{
+    display: inline-block;
+    margin-left: 0.3rem;
+    margin-right: 0.5rem;
+    font-size: 1.4rem;
+    }
+    nav .logo{
+    font-size: 3rem;
+    cursor: pointer;
+    margin-left:2.2rem;
+    }
+   
     </style>
 
 </head>
@@ -28,7 +132,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#trainers">Trainers</a></li>
-                <li><a href="#">Plan</a></li>
+                <li><a href="#">Contact</a></li>
                 <li><a href="./login.php">Login</a></li>
             </ul>
         </nav>
@@ -110,10 +214,10 @@
     
             <div class="inner-trainer">
                 <div class="trainer-content">
-                    <h2>Trainers</h2>
-                    <span>our builders</span>
+                    <h2>Samira Heni</h2>
+                    <span>Pilate trainer</span>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, dolorem ipsum odio minima iste enim quibusdam error vero quia voluptate accusamus cupiditate, mollitia, dolorum est deleniti nihil fugit ipsam expedita?</p>
+                    <p>She played semi-professional tennis in junior leagues and as well as varsity basketball. After suffering a ski accident in her senior year of college, she started Pilates as a method of rehabilitation. This treatment turned into a passion over time. She dabbled in various Pilates programs but became convinced that the STOTT PILATES® system was far more innovative and the most scientific program she had experienced.</p>
                 </div>
             </div>
     
@@ -123,10 +227,12 @@
     
             <div class="inner-trainer">
                 <div class="trainer-content">
-                    <h2>Trainers</h2>
-                    <span>our builders</span>
+                    <h2>Nour Kobbi</h2>
+                    <span>Box trainer</span>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, dolorem ipsum odio minima iste enim quibusdam error vero quia voluptate accusamus cupiditate, mollitia, dolorum est deleniti nihil fugit ipsam expedita?</p>
+                    <p>Femaleboxingcoach wants to run and create as many women only sessions to enjoy the sport, skill and benefits of boxing. Offering a safe space and sessions which empower individual woman, mentally and physically within a sport that men dominate.
+
+My sessions are for all abilities and fitness levels, a full body workout. Women can come and learn defences, skill, combinations, foot work, partner work and pad work. </p>
                 </div>
             </div>
             <div class="inner-trainer">
@@ -134,10 +240,10 @@
             </div>
             <div class="inner-trainer">
                 <div class="trainer-content">
-                    <h2>Trainers</h2>
-                    <span>our builders</span>
+                    <h2>Amira Jouini</h2>
+                    <span>Yoga trainer</span>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, dolorem ipsum odio minima iste enim quibusdam error vero quia voluptate accusamus cupiditate, mollitia, dolorum est deleniti nihil fugit ipsam expedita?</p>
+                    <p>As a believer that yoga is for everybody, Amiraa has shared yoga with children, senior citizens, and all ages and abilities in between.  Amira is especially interested in educating athletes about how yoga can benefit them, and has developed and taught classes specifically for athletes, including:  Yoga for Runners, Yoga for Cyclists, Yoga for Golfers, and Yoga for Triathletes. She has also brought yoga to young athletes in the sports of lacrosse, soccer, baseball, and cross country.</p>
                 </div>
             </div>
         </div>
@@ -223,27 +329,40 @@
 
     <!-- contact -->
 
-    <section class="contact">
-        <div class="contact-row">
-            <div class="contact-left-col">
-                <div class="form">
-                    <input type="text" name="" placeholder="E-mail">
-                    <input type="text" name="" placeholder="Subject"><br>
-                    <textarea rows="10" cols="40" placeholder="Message"></textarea>
-                    <br> <button class="c_btn">Send</button>
-                </div>
+    <section id="contact">
+		<div class="services-info">
+			<h1>Get in<span id="blue">Touch</span></h1>
+	        <p> We are Available</p>
+        </div>
+
+    <section class="contact-row">
+        <div class="contact-left-col">
+            <div class="form">
+                <input type="text" name="" placeholder="E-mail">
+                <input type="text" name="" placeholder="Subject"><br>
+                <textarea rows="10" cols="40" placeholder="Message"></textarea>
+                <br> <button class="c_btn">Send</button>
             </div>
+        </div>
             <div class="contact-right-col">
-                <h1><i class="fa fa-envelope-o" aria-hidden="true"></i> E-mail</h1> <p>UFITgym.Contact@gmail.com</p><br>
+                <h1><i class="fa fa-envelope-o" aria-hidden="true"></i> E-mail</h1> <p>nd03081998@gmail.com</p><br>
                 <h1><i class="fa fa-phone" aria-hidden="true"></i> Mobile</h1><p>823944147, 823944140</p>
                 <br>
                 <h1><i class="fa fa-location-arrow" aria-hidden="true"></i> Address</h1>
-                <p> Near Manar City<br>
-                    Rue Habib Thamer no.5, Laxmangarh (Sikar), Rajasthan
+                <p> Near Shyam Mandir<br>
+                    Ward no.5, Laxmangarh (Sikar), Rajasthan
                 </p>
             </div>
-        </div>
     </section>
+
+    <section id="footer">
+	<h1>BP<span id="blue">FG</span></h1>
+	
+	<p>&copy; 2020 BPFG, Rajasthan, India </p>
+	<img src="images/icon.png">
+
+    </section>
+                
 
 </body>
 </html>
