@@ -1,4 +1,5 @@
 <?php
+  session_start();
   require_once 'config.php';
 
     $id=$_GET['id'];
@@ -13,7 +14,7 @@
  {
 	$username=$_POST['username'];
 
-	$q = "UPDATE register SET username=$username where id=$id";
+	$q = "UPDATE register SET username='$username' where id='$id'";
 	$query = mysqli_query($conn,$q);
 	header('location:./espaceAdmin/adminInterface.php');
 }

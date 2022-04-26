@@ -1,12 +1,17 @@
 <?php
 session_start();
 require 'config.php';
+
 if(isset($_POST["submiti"])){
+
     $usernameEmail = $_POST["usernameEmail"];
     $password = $_POST["password"];
+
     if(!empty($usernameEmail) AND !empty($password)){
+
         $result = mysqli_query($conn,"SELECT * FROM register WHERE username = '$usernameEmail' OR email = '$usernameEmail' ");
         $row = mysqli_fetch_assoc($result);
+
         if(mysqli_num_rows($result) > 0){
             if($password == $row["password"]){
                 if($row["is_admin"] == 1)
@@ -24,12 +29,10 @@ if(isset($_POST["submiti"])){
         }else{
             echo"<script> alert('User not registered'); </script>";
         }
-
     }else{
         echo"<script> alert('fill all fields!'); </script>";
     }
 }
-
 
 ?>
 
@@ -62,20 +65,20 @@ if(isset($_POST["submiti"])){
             background: linear-gradient(135deg, #71b7e6, #9b59b6);
         }
         .container .title{
-    font-size: 25px;
-    font-weight: 500;
-    position: relative;
-  }
-  .container .title::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 30px;
-    border-radius: 5px;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
-  }
+            font-size: 25px;
+            font-weight: 500;
+            position: relative;
+        }
+        .container .title::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 30px;
+            border-radius: 5px;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+        }
     </style>
 </head>
 <body>

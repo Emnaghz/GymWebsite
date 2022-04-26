@@ -1,31 +1,6 @@
 <?php
-echo"<script src='./js/sweetalert2@11.js'></script>";
-
-require 'config.php';
-
-if(isset($_POST["submit"])){
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $dob = $_POST['dob'];
-    $phone = $_POST['phone'];
-    $password = md5($_POST['password']);
-    $cpassword = md5($_POST['cpassword']);
-    $duplicate = mysqli_query($conn, "SELECT * FROM register WHERE username ='$username'  OR email = '$email'");
-    if(mysqli_num_rows($duplicate) > 0){
-        echo"<script> alert('Username or Email Already Exist'); </script>";
-    }else{
-        if($password === $cpassword){
-            $query = "INSERT INTO register(username,email,dob,phone,password) VALUES ('$username','$email','$dob,'$phone','$password')";
-        mysqli_query($conn,$query);
-        /*echo"<script> Swal.fire ('Correct!', 'You got the answer right!', 'success');</script>";*/
-        echo"<script> alert('registered successfully!');</script>";
-        }else{
-        echo"<script> alert('Password does not match');</script>";
-        }
-    }
-}
-?>
-
+  require_once 'config.php';
+?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,7 +34,8 @@ if(isset($_POST["submit"])){
     <div class="container">
     <div class="title">Registration</div>
     <div class="content" >
-      <form action="#" method="POST" onsubmit="return confirm()">
+      
+      <form action="signin.php" method="POST" >
         <div class="user-details">
           <div class="input-box">
             <span class="details">Username</span>
@@ -87,7 +63,7 @@ if(isset($_POST["submit"])){
           </div>
         </div>
         <div class="input-group">
-            <button class="btn" type="submit" name="submit">Register</button>
+            <button class="btn" type="submit" name="register">Register</button>
         </div>
         <br>
         <p  class="login-register-text">Have an account? <a href="login.php">Login Here</a></p>

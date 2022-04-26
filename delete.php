@@ -1,4 +1,5 @@
 <?php
+session_start();
 /* confirmer */
 if(isset($_POST["id"]) && !empty($_POST["id"])){
     /* Inclure le fichier config */
