@@ -71,7 +71,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image:url(./images/bg1.jpg);
+    background-image:url(../images/bg1.jpg);
 }
 
 .container {
@@ -145,4 +145,36 @@ body {
     .container .login-social a {
         display: block;
     }
+}
+
+.container .login-text{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .login-text::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.container .title::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }

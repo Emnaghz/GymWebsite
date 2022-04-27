@@ -21,6 +21,7 @@ if(isset($_POST['register'])){
             $result = mysqli_query($conn, $sql);
             if($result){
                 echo"<script>alert('success')</script>";
+                header('Location: login.php');
             }
             else{
                 echo"<script>alert('Woops! Something wrong went ')</script>";

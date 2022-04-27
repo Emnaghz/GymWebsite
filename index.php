@@ -8,121 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UFIT Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style2.css">
     <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/44f557ccce.js"></script>
-    <style>
-        nav{
-            background-color: black;
-        }
-
-        /* contact */
-        #contact{
-            padding: 30px 0px;
-        }
-
-        .contact-row{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .contact-left-col{
-            flex-basis: 50%;
-            padding-top: 50px;
-        }
-        .contact-right-col{
-            flex-basis: 50%;
-            max-width: 450px;
-            margin: auto;
-        }
-        .contact-right-col i{
-            font-size: 20px;
-            padding: 10px;
-            background:#74b9ff;
-            color: white; 
-        }
-        .contact-right-col p{
-            margin-top: 10px;
-            margin-bottom: 20px;
-        }
-
-
-        #footer{
-            background: black;
-            color:white;
-            padding: 10px;
-            display: flex;
-
-            justify-content: space-around;
-            align-items: center;
-        }
-
-
-        #footer h1{
-            font-size: 50px;
-        }
-        #footer p{
-            font-size: 25px;
-        }
-
-
-
-        .form{
-            margin-bottom: 0;
-            width: 70%;
-            margin:auto;
-            text-align: center;
-        }
-        .form input[type="text"]{
-            width: 70%;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-        textarea{
-            width: 70%;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-
-
-
-        .c_btn{
-            background: black;
-            color: white;
-            padding: 10px;
-            width: 50%;
-            border:none;
-        }
-
-        nav{
-    padding:1.5rem 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    z-index: 1000;
-    position: fixed;
-    top:0; left:0; right:0;
-    background-color: rgb(92, 0, 49);
-    margin:0cm;
-    padding: 0.01mm;
-    }
-    nav .links li{
-    display: inline-block;
-    margin-left: 0.3rem;
-    margin-right: 0.5rem;
-    font-size: 1.4rem;
-    }
-    nav .logo{
-    font-size: 3rem;
-    cursor: pointer;
-    margin-left:2.2rem;
-    }
-   
-    </style>
-
 </head>
+
 <body>
     <header>
         <nav>
@@ -142,6 +34,7 @@
         </div>
     </header>
 
+    <!-- About Us -->
     <section class="about" id="about">
         <div class="row">
             <div class="image">
@@ -155,6 +48,7 @@
         </div>
     </section>
 
+    <!--Services -->
     <section class="services" id="services">
         <div class="title">Our <span>Services</span></div>
         <div class="container">
@@ -203,7 +97,7 @@
         </div>
     </section>
 
-    <!-- Start Trainers -->
+    <!--Trainers -->
     <section class="our-trainers" id="trainers">
         <div class="title">Meet Our <span>Trainers</span></div>
     
@@ -232,7 +126,7 @@
                     <hr>
                     <p>Femaleboxingcoach wants to run and create as many women only sessions to enjoy the sport, skill and benefits of boxing. Offering a safe space and sessions which empower individual woman, mentally and physically within a sport that men dominate.
 
-My sessions are for all abilities and fitness levels, a full body workout. Women can come and learn defences, skill, combinations, foot work, partner work and pad work. </p>
+                    My sessions are for all abilities and fitness levels, a full body workout. Women can come and learn defences, skill, combinations, foot work, partner work and pad work. </p>
                 </div>
             </div>
             <div class="inner-trainer">
@@ -254,7 +148,6 @@ My sessions are for all abilities and fitness levels, a full body workout. Women
         <div class="title">Our <span>Reviews</span></div>
 
         <h2 class="title-review">Our Clients Love Us</h2>
-        <p class="note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil laboriosam possimus perferendis non error neque.</p>
 
         <div class="reviews">
         <div class="review">
@@ -323,18 +216,10 @@ My sessions are for all abilities and fitness levels, a full body workout. Women
             </div>
 
         </div>
-
     </section>
 
-
     <!-- contact -->
-
     <section id="contact">
-		<div class="services-info">
-			<h1>Get in<span id="blue">Touch</span></h1>
-	        <p> We are Available</p>
-        </div>
-
     <section class="contact-row">
         <div class="contact-left-col">
             <div class="form">
@@ -345,24 +230,67 @@ My sessions are for all abilities and fitness levels, a full body workout. Women
             </div>
         </div>
             <div class="contact-right-col">
-                <h1><i class="fa fa-envelope-o" aria-hidden="true"></i> E-mail</h1> <p>nd03081998@gmail.com</p><br>
-                <h1><i class="fa fa-phone" aria-hidden="true"></i> Mobile</h1><p>823944147, 823944140</p>
+                <h1><i class="fa fa-envelope-o" aria-hidden="true"></i> E-mail</h1> <p>UFITgym@gmail.com</p><br>
+                <h1><i class="fa fa-phone" aria-hidden="true"></i> Mobile</h1><p>98300363, 71256392</p>
                 <br>
                 <h1><i class="fa fa-location-arrow" aria-hidden="true"></i> Address</h1>
-                <p> Near Shyam Mandir<br>
-                    Ward no.5, Laxmangarh (Sikar), Rajasthan
+                <p> Near Manar City<br>
+                    Manzah 5 près de meublatex
                 </p>
             </div>
     </section>
 
-    <section id="footer">
-	<h1>BP<span id="blue">FG</span></h1>
-	
-	<p>&copy; 2020 BPFG, Rajasthan, India </p>
-	<img src="images/icon.png">
+    <!-- Footer -->
+	<footer class="footer-distributed">
 
-    </section>
-                
+        <div class="footer-left">
+            <h3><span>UFIT</span></h3>
+
+            <p class="footer-links">
+                <a href="index.php">Home</a>
+                |
+                <a href="#about">About</a>
+                |
+                <a href="#contact">Contact</a>
+            </p>
+
+            <p class="footer-company-name">Copyright © 2021 <strong>UfitDeveloper</strong> All rights reserved</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Tunis</span>
+                    Menzah</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+216 98300363</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:sagar00001.co@gmail.com">UFITgym@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the company</span>
+                <strong>Sagar Developer</strong> is a Youtube channel where you can find more creative CSS Animations
+                and
+                Effects along with
+                HTML, JavaScript and Projects using C/C++.
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+  
 
 </body>
 </html>

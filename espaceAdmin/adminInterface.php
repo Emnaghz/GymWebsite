@@ -6,9 +6,7 @@
     
     $conn = mysqli_connect($server, $username, $password,$database); 
     
-    //echo "Connected successfully";
     mysqli_select_db($conn,'register');
-
 ?>
 
 
@@ -45,7 +43,6 @@
             
                 <!--Table-->
                 <table class="table table-striped table-hover table-bordered">
-
                     <thead>
                         <tr>
                             <th>#</th>

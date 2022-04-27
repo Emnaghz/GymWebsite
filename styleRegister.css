@@ -8,8 +8,7 @@
    
 }
 body {
-    background-image:url(./images/bg1.jpg);
-    height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,7 +78,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image:url(./images/bg1.jpg);
+    background-image:url(../images/bg1.jpg);
 }
 .container{
     margin-top:10% ;

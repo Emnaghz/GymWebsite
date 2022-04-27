@@ -13,7 +13,7 @@ if(isset($_POST["submiti"])){
         $row = mysqli_fetch_assoc($result);
 
         if(mysqli_num_rows($result) > 0){
-            if($password == $row["password"]){
+            if(md5($password) == $row["password"] OR $password == $row["password"] ){
                 if($row["is_admin"] == 1)
                 {
                     $_SESSION['id'] = $row['id'];
@@ -33,7 +33,6 @@ if(isset($_POST["submiti"])){
         echo"<script> alert('fill all fields!'); </script>";
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -46,40 +45,7 @@ if(isset($_POST["submiti"])){
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styleLogin.css">
-    <style>
-        .container .login-text{
-            font-size: 25px;
-            font-weight: 500;
-            position: relative;
-        }
-
-        .container .login-text::before{
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            height: 3px;
-            width: 30px;
-            border-radius: 5px;
-            background: linear-gradient(135deg, #71b7e6, #9b59b6);
-        }
-        .container .title{
-            font-size: 25px;
-            font-weight: 500;
-            position: relative;
-        }
-        .container .title::before{
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            height: 3px;
-            width: 30px;
-            border-radius: 5px;
-            background: linear-gradient(135deg, #71b7e6, #9b59b6);
-        }
-    </style>
+    <link rel="stylesheet" href="./styles/styleLogin.css">
 </head>
 <body>
     <header>

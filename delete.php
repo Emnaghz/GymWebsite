@@ -1,8 +1,8 @@
 <?php
 session_start();
-/* confirmer */
+
 if(isset($_POST["id"]) && !empty($_POST["id"])){
-    /* Inclure le fichier config */
+    
     require_once "config.php";
     
     $sql = "DELETE FROM register WHERE id = ?";
@@ -13,7 +13,6 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
         $param_id = trim($_POST["id"]);
         
         if(mysqli_stmt_execute($stmt)){
-            /* supprimé, retourne */
             header("location: ./espaceAdmin/adminInterface.php");
             exit();
         } else{
